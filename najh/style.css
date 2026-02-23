@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    color: white;
+    scroll-behavior: smooth;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                url('bg.jpg') no-repeat center center/cover;
+    background-attachment: fixed;
+}
+
+
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+/* STAR PHOTO PLACEHOLDER */
+.photo-star {
+    width: 140px;
+    height: 140px;
+    clip-path: polygon(
+        50% 0%, 61% 35%, 98% 35%, 68% 57%, 
+        79% 91%, 50% 70%, 21% 91%, 32% 57%, 
+        2% 35%, 39% 35%
+    ); /* star shape */
+    overflow: hidden;
+    margin-bottom: 20px;
+    border: 3px solid #00bfff;
+    box-shadow: 0 0 15px #00bfff;
+    transition: 0.3s;
+}
+
+.photo-star img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Optional hover glow effect for star */
+.photo-star:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px #00bfff;
+}
+
+.hero h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 60px;
+    color: #add8e6; 
+    text-shadow: 0 0 15px #00bfff;
+}
+
+.hero h3 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 24px;
+    margin-top: 15px;
+    font-style: italic;
+    color: #cceeff;
+    text-shadow: 0 0 10px #00bfff;
+}
+
+.hero button {
+    margin-top: 30px;
+    padding: 12px 25px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background: #00bfff;
+    color: white;
+    box-shadow: 0 0 15px #87cefa;
+    transition: 0.3s;
+}
+
+.hero button:hover {
+    background: #87cefa;
+    box-shadow: 0 0 25px #00bfff;
+}
+
+
+.section {
+    background: rgba(0,0,0,0.65); 
+    padding: 40px 30px;
+    margin: 30px auto;
+    max-width: 900px;
+    border-radius: 20px;
+    border: 2px solid #87cefa;
+    box-shadow: 0 0 25px #00bfff;
+}
+
+.section h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #add8e6;
+    text-shadow: 0 0 10px #00bfff;
+}
+
+.section p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.skills span {
+    padding: 8px 15px;
+    border-radius: 20px;
+    border: 1px solid #87cefa;
+    background: rgba(173,216,230,0.2); 
+    cursor: default;
+    transition: 0.3s;
+}
+
+.skills span:hover {
+    background: #00bfff;
+    color: white;
+}
+
+/* ============================= */
+/* PROJECTS */
+.project {
+    background: rgba(255,255,255,0.05);
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+.project:hover {
+    background: rgba(0,191,255,0.3);
+}
+
+.project-icon {
+    margin-right: 10px;
+    font-size: 24px;
+    vertical-align: middle;
+}
+
+.project-detail {
+    display: none;
+    margin-top: 10px;
+    padding: 10px 15px;
+    border-left: 3px solid #00bfff;
+    font-size: 14px;
+    color: #cceeff;
+}
+
+
+@media(max-width: 900px){
+    .hero h1 {
+        font-size: 42px;
+    }
+    .hero h3 {
+        font-size: 18px;
+    }
+    .section {
+        padding: 30px 20px;
+    }
+}

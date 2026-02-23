@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jhana Rica Villaceran Portfolio</title>
+
+<!-- GOOGLE FONTS -->
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@400&display=swap" rel="stylesheet">
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    color: white;
+    scroll-behavior: smooth;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                url('bg.jpg') no-repeat center center/cover;
+    background-attachment: fixed;
+}
+
+
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+
+.photo-star {
+    width: 150px;
+    height: 150px;
+    clip-path: polygon(
+        50% 0%, 61% 35%, 98% 35%, 68% 57%, 
+        79% 91%, 50% 70%, 21% 91%, 32% 57%, 
+        2% 35%, 39% 35%
+    ); /* star shape */
+    overflow: hidden;
+    margin-bottom: 20px;
+    border: 3px solid #00bfff;
+    box-shadow: 0 0 15px #00bfff;
+}
+
+.photo-star img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 60px;
+    color: #add8e6; 
+    text-shadow: 0 0 15px #00bfff;
+}
+
+.hero h3 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 24px;
+    margin-top: 15px;
+    font-style: italic;
+    color: #cceeff;
+    text-shadow: 0 0 10px #00bfff;
+}
+
+.hero button {
+    margin-top: 30px;
+    padding: 12px 25px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background: #00bfff;
+    color: white;
+    box-shadow: 0 0 15px #87cefa;
+    transition: 0.3s;
+}
+
+.hero button:hover {
+    background: #87cefa;
+    box-shadow: 0 0 25px #00bfff;
+}
+
+
+.section {
+    background: rgba(0,0,0,0.65); 
+    padding: 40px 30px;
+    margin: 30px auto;
+    max-width: 900px;
+    border-radius: 20px;
+    border: 2px solid #87cefa;
+    box-shadow: 0 0 25px #00bfff;
+}
+
+.section h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #add8e6;
+    text-shadow: 0 0 10px #00bfff;
+}
+
+.section p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.skills span {
+    padding: 8px 15px;
+    border-radius: 20px;
+    border: 1px solid #87cefa;
+    background: rgba(173,216,230,0.2); 
+    cursor: default;
+    transition: 0.3s;
+}
+
+.skills span:hover {
+    background: #00bfff;
+    color: white;
+}
+
+.project {
+    background: rgba(255,255,255,0.05);
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+.project:hover {
+    background: rgba(0,191,255,0.3);
+}
+
+.project-icon {
+    margin-right: 10px;
+    font-size: 24px;
+    vertical-align: middle;
+}
+
+.project-detail {
+    display: none;
+    margin-top: 10px;
+    padding: 10px 15px;
+    border-left: 3px solid #00bfff;
+    font-size: 14px;
+    color: #cceeff;
+}
+
+
+@media(max-width: 900px){
+    .hero h1 {
+        font-size: 42px;
+    }
+    .hero h3 {
+        font-size: 18px;
+    }
+    .section {
+        padding: 30px 20px;
+    }
+}
+</style>
+</head>
+<body>
+
+<!-- HERO SECTION -->
+<div class="hero">
+    <div class="photo-star">
+        <img src="your-photo.jpg" alt="My Photo">
+    </div>
+    <h1>HELLO, I AM JHANA RICA VILLACERAN</h1>
+    <h3>Bachelor of Science in Information Technology</h3>
+    <button onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'});">
+        View My Portfolio
+    </button>
+</div>
+
+<!-- ABOUT ME -->
+<div class="section" id="about">
+    <h2>About Me</h2>
+    <p><strong>Name:</strong> Jhana Rica Villaceran</p>
+    <p><strong>Course:</strong> BSIT</p>
+    <p><strong>Year:</strong> 3rd Year</p>
+    <p>Driven and motivated IT student focused on applying technical skills, continuous learning, and contributing to organizational success.</p>
+</div>
+
+<!-- CAREER OBJECTIVE -->
+<div class="section">
+    <h2>Career Objective</h2>
+    <p>To build a stable and successful path in the field of Information Technology by applying knowledge and technical skills effectively. To continuously enhance abilities, contribute to organizational success, and grow professionally in a dynamic and challenging environment.</p>
+</div>
+
+<!-- SKILLS -->
+<div class="section">
+    <h2>Skills</h2>
+    <div class="skills">
+        <span>Computer Literate</span>
+        <span>Web Design</span>
+        <span>Data Analytics</span>
+        <span>Communication Skills</span>
+        <span>Detail Oriented</span>
+    </div>
+</div>
+
+<!-- PROJECTS -->
+<div class="section">
+    <h2>My Projects</h2>
+
+    <div class="project" onclick="toggleDetail(this)">
+        <span class="project-icon">📊</span> COVID-19 Data Analytics Dashboard
+        <div class="project-detail">
+            A web-based dashboard that tracks COVID-19 statistics, displays graphs and insights, and allows filtering by region.
+        </div>
+    </div>
+
+    <div class="project" onclick="toggleDetail(this)">
+        <span class="project-icon">🏦</span> Banking System
+        <div class="project-detail">
+            A Banking System that allows users to manage accounts, perform transactions, and check balances securely and efficiently.
+        </div>
+    </div>
+
+    <div class="project" onclick="toggleDetail(this)">
+        <span class="project-icon">💻</span> Portfolio
+        <div class="project-detail">
+            My personal portfolio highlighting my projects, skills, and career objectives.
+        </div>
+    </div>
+</div>
+
+<!-- CONTACT INFO -->
+<div class="section">
+    <h2>Contact Information</h2>
+    <p>📞 09xxxxxxxx</p>
+    <p>📧 jhanaricavillaceran@gmail.com</p>
+    <p>📍 Cebu, Philippines</p>
+</div>
+
+<!-- SCRIPT FOR PROJECT DETAILS -->
+<script>
+function toggleDetail(el){
+    const detail = el.querySelector('.project-detail');
+    if(detail.style.display === "block"){
+        detail.style.display = "none";
+    } else {
+        detail.style.display = "block";
+    }
+}
+</script>
+
+</body>
+</html>
